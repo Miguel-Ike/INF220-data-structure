@@ -8,6 +8,7 @@ package test;
 import business_layer.others.Person;
 import business_layer.simple.generic.lists.List;
 import business_layer.simple.generic.queue.Queue;
+import business_layer.simple.generic.stack.Stack;
 import java.time.LocalDate;
 import java.time.Month;
 
@@ -50,6 +51,17 @@ public class Test {
         System.out.println(queue);
     }
 
+    public void testStack() {
+        Stack<Person> stack = new Stack<>();
+        System.out.println(stack);
+        stack.push(new Person(9791996, "Miguel", "Martinez", LocalDate.of(1995, Month.SEPTEMBER, 3)));
+        stack.push(new Person(9691996, "Katherine", "Valverde", LocalDate.of(1995, Month.SEPTEMBER, 8)));
+        stack.push(new Person(9891996, "Johana", "Huiza", LocalDate.of(1995, Month.SEPTEMBER, 4)));
+        System.out.println(stack);
+        System.out.println(stack.pop());
+        System.out.println(stack);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -57,7 +69,8 @@ public class Test {
         // TODO code application logic here
         Test test = new Test();
 //        test.testList();
-        test.testQueue();
+//        test.testQueue();
+        test.testStack();
     }
 
 }
