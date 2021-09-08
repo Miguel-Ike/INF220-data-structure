@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package business_layer.simple.generic.stack;
+package business_layer.tda_dynamic.simple.generic.stack;
 
-import business_layer.simple.generic.node.Node;
+import business_layer.tda_dynamic.simple.generic.node.Node;
 
 /**
  *
