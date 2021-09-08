@@ -5,6 +5,8 @@
  */
 package business_layer.simple.generic.queue;
 
+import business_layer.simple.generic.node.Node;
+
 /**
  *
  * @author Miguel_Ike
