@@ -6,9 +6,9 @@
 package test;
 
 import business_layer.others.Person;
-import business_layer.simple.generic.lists.List;
-import business_layer.simple.generic.queue.Queue;
-import business_layer.simple.generic.stack.Stack;
+import business_layer.tda_dynamic.simple.generic.list.List;
+import business_layer.tda_dynamic.simple.generic.queue.Queue;
+import business_layer.tda_dynamic.simple.generic.stack.Stack;
 import java.time.LocalDate;
 import java.time.Month;
 
