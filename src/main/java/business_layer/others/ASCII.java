@@ -22,14 +22,35 @@ public class ASCII {
         return ALPHABET.indexOf(c);
     }
 
-    public char transformToString(int value) {
+    public char transformToChar(int value) {
         return ALPHABET.charAt(value);
     }
 
-    public void print() {
-        System.out.println(ALPHABET.length());
-        for (int i = 0; i < ALPHABET.length(); i++) {
-            System.out.println(ALPHABET.charAt(i) + " : " + (int) ALPHABET.charAt(i));
-        }
+    public int[] transformToString(String string) {
+        string = string.toUpperCase();
+        return string.isEmpty() || !validateTransformToString(string) ? null : transformToStringValues(string);
     }
+
+    private boolean validateTransformToString(String string) {
+        boolean sw = true;
+        for (int i = 0; i < string.length() && sw; i++) {
+            sw = ALPHABET.contains(String.valueOf(string.charAt(i)));
+        }
+        return sw;
+    }
+
+    private int[] transformToStringValues(String string) {
+        int values[] = new int[string.length()];
+        for (int i = 0; i < string.length(); i++) {
+            values[i] = transformToInteger(string.charAt(i));
+        }
+        return values;
+    }
+
+//    private void print() {
+//        System.out.println(ALPHABET.length());
+//        for (int i = 0; i < ALPHABET.length(); i++) {
+//            System.out.println(ALPHABET.charAt(i) + " : " + (int) ALPHABET.charAt(i));
+//        }
+//    }
 }
